@@ -34,8 +34,5 @@
 		"java": ">=17",
 		"fabric-api": "*",
 		"spectrum": ">=1.7.1"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }
