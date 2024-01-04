@@ -3,9 +3,10 @@
 	"id": "spectral_rainbow_forest",
 	"version": "${version}",
 	"name": "Spectral Rainbow Forest",
-	"description": "This mod adds a biome with all of the colorful trees in spectrum  -- \"spectrum\": \">=1.7.1\" --",
+	"description": "This mod adds a biome with all of the colorful trees in spectrum",
 	"authors": [
-		"JustCoderdev"
+		"JustCoderdev",
+		",\"spectrum\": \">=1.7.1\","
 	],
 	"contact": {
 		"homepage": "https://github.com/JustCoderdev",
@@ -23,6 +24,9 @@
 		],
 		"fabric-datagen": [
 			"com.github.justcoderdev.SpectralRainbowForestDataGenerator"
+		],
+		"terrablender": [
+			"com.github.justcoderdev.world.biome.ModTerrablenderAPI"
 		]
 	},
 	"mixins": [
@@ -32,7 +36,10 @@
 		"fabricloader": ">=0.15.3",
 		"minecraft": "~1.20.1",
 		"java": ">=17",
-		"fabric-api": "*"
+		"fabric-api": "*",
+
+		"spectrum": ">=1.7.1",
+		"terrablender": "3.0.0.170"
 	},
 	"suggests": {
 		"another-mod": "*"
