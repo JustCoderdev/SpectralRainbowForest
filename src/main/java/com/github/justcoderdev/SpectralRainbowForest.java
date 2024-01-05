@@ -16,7 +16,7 @@ public class SpectralRainbowForest implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("Hello Modded Minecraft world!");
 
-		ModWorldGeneration.generateModWorldGen();
+		//ModWorldGeneration.generateModWorldGen();
 	}
 
 	public static Identifier getSpectrumIdentifier(String name) {

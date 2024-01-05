@@ -9,10 +9,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BiomeMoodSound;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.BiomeEffects;
-import net.minecraft.world.biome.GenerationSettings;
-import net.minecraft.world.biome.SpawnSettings;
+import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 
@@ -48,17 +45,19 @@ public class ModBiomes {
                         context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
 
         globalOverworldGeneration(biomeBuilder);
-        //DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
+        ////DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
         DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
-        //DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultDisks(biomeBuilder);
+        ////DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
 
-//      biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.TREES_PLAINS);
+        ////biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.TREES_PLAINS);
+
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.SPECTRUM_WHITE_TREE_PLACED_KEY);
-//        DefaultBiomeFeatures.addDefaultGrass(biomeBuilder);
-
         DefaultBiomeFeatures.addForestFlowers(biomeBuilder);
-        DefaultBiomeFeatures.addLargeFerns(biomeBuilder);
+        ////DefaultBiomeFeatures.addLargeFerns(biomeBuilder);
 
+        DefaultBiomeFeatures.addDefaultFlowers(biomeBuilder);
+        DefaultBiomeFeatures.addForestGrass(biomeBuilder);
 
         DefaultBiomeFeatures.addDefaultMushrooms(biomeBuilder);
         DefaultBiomeFeatures.addDefaultVegetation(biomeBuilder);
@@ -70,13 +69,13 @@ public class ModBiomes {
             .generationSettings(biomeBuilder.build())
             .spawnSettings(spawnBuilder.build())
             .effects((new BiomeEffects.Builder())
-                .waterColor(0x4159204)
-                .waterFogColor(0x329011)
-                .skyColor(0x7972607)
+                .waterColor(4159204)
+                .waterFogColor(329011)
+                .skyColor(7972607)
 
                 .grassColor(0x7f03fc)
                 //.foliageColor(0xd203fc)
-                .fogColor(0x12638463)
+                .fogColor(12638463)
                 .moodSound(BiomeMoodSound.CAVE)
                 //.music(MusicType.GAME)
                 //.music(MusicType.createIngameMusic(RegistryEntry.of(ModSounds.BAR_BRAWL)))

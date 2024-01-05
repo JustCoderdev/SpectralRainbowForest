@@ -24,9 +24,9 @@ public class ModOverworldRegion extends Region {
 		// Overlap Vanilla's parameters with our own for our COLD_BLUE biome.
 		// The parameters for this biome are chosen arbitrarily.
 		new ParameterPointListBuilder()
-				.temperature(Temperature.span(Temperature.NEUTRAL, Temperature.WARM))
+				.temperature(Temperature.NEUTRAL)
 				.humidity(Humidity.span(Humidity.NEUTRAL, Humidity.HUMID))
-				.continentalness(Continentalness.NEAR_INLAND)
+				.continentalness(Continentalness.FULL_RANGE)
 				.erosion(Erosion.EROSION_0, Erosion.EROSION_1)
 				.depth(Depth.SURFACE, Depth.FLOOR)
 				.weirdness(Weirdness.MID_SLICE_NORMAL_ASCENDING, Weirdness.MID_SLICE_NORMAL_DESCENDING)
@@ -35,8 +35,8 @@ public class ModOverworldRegion extends Region {
 		// Add our points to the mapper
 		builder.build().forEach(mapper);
 
-//		this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
-//			modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, ModBiomes.RAINBOW_FOREST_BIOME);
-//		});
+		/* this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+			modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, ModBiomes.RAINBOW_FOREST_BIOME);
+		}); */
 	}
 }

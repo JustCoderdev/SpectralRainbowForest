@@ -38,7 +38,6 @@
 		"java": ">=17",
 		"fabric-api": "*",
 
-		"spectrum": ">=1.7.1",
 		"terrablender": "3.0.0.170"
 	},
 	"suggests": {
