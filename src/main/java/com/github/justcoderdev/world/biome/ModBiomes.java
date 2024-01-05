@@ -16,7 +16,7 @@ import static com.github.justcoderdev.world.ModPlacedFeatures.SPECTRUM_TREE_PLAC
 
 public class ModBiomes {
     public static final RegistryKey<Biome> RAINBOW_FOREST_BIOME = RegistryKey.of(RegistryKeys.BIOME,
-            new Identifier(SpectralRainbowForest.MOD_ID, "rainbow_forest_biome"));
+            new Identifier(SpectralRainbowForest.MOD_ID, "spectral_rainbow_forest_biome"));
 
     public static void bootstrap(Registerable<Biome> context) {
         context.register(RAINBOW_FOREST_BIOME, rainbowForestBiome(context));
