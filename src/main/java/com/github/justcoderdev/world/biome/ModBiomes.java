@@ -1,7 +1,6 @@
 package com.github.justcoderdev.world.biome;
 
 import com.github.justcoderdev.SpectralRainbowForest;
-import com.github.justcoderdev.world.ModPlacedFeatures;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registerable;
@@ -12,6 +11,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
+
+import static com.github.justcoderdev.world.ModPlacedFeatures.SPECTRUM_TREE_PLACED_KEYS;
 
 public class ModBiomes {
     public static final RegistryKey<Biome> RAINBOW_FOREST_BIOME = RegistryKey.of(RegistryKeys.BIOME,
@@ -52,7 +53,10 @@ public class ModBiomes {
 
         ////biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.TREES_PLAINS);
 
-        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.SPECTRUM_WHITE_TREE_PLACED_KEY);
+        for (var TREE_PLACED_KEY: SPECTRUM_TREE_PLACED_KEYS) {
+            biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, TREE_PLACED_KEY);
+        }
+
         DefaultBiomeFeatures.addForestFlowers(biomeBuilder);
         ////DefaultBiomeFeatures.addLargeFerns(biomeBuilder);
 

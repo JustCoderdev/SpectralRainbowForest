@@ -1,6 +1,5 @@
 package com.github.justcoderdev;
 
-import com.github.justcoderdev.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.util.Identifier;

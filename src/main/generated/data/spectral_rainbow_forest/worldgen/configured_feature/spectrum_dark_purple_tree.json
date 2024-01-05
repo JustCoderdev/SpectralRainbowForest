@@ -17,7 +17,7 @@
     "foliage_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "spectrum:white_leaves"
+        "Name": "spectrum:dark_purple_leaves"
       }
     },
     "force_dirt": false,
@@ -37,7 +37,7 @@
     "trunk_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "spectrum:white_log"
+        "Name": "spectrum:dark_purple_log"
       }
     }
   }

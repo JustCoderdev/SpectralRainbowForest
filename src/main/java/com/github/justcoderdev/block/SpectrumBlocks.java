@@ -1,19 +1,21 @@
 package com.github.justcoderdev.block;
 
 import com.github.justcoderdev.SpectralRainbowForest;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import com.github.justcoderdev.vanilla.VanillaColor;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 
+import java.util.Arrays;
+
 public class SpectrumBlocks {
-   public static final Block WHITE_LOG = registerBlock("white_log", new Block(FabricBlockSettings.copyOf(Blocks.OAK_WOOD)));
-    public static final Block WHITE_LEAVES = registerBlock("white_leaves", new Block(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block[] LOGS = Arrays.stream(VanillaColor.ALL)
+            .map(VanillaColor::registerAsBlockLog).toArray(Block[]::new);
 
+    public static final Block[] LEAVES = Arrays.stream(VanillaColor.ALL)
+            .map(VanillaColor::registerAsBlockLeaves).toArray(Block[]::new);
 
-
-    private static Block registerBlock(String name, Block block) {
+    public static Block registerBlock(String name, Block block) {
         return Registry.register(Registries.BLOCK, SpectralRainbowForest.getSpectrumIdentifier(name), block);
     }
 }
