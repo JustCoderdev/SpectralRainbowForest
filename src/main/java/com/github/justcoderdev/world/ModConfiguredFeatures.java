@@ -14,6 +14,8 @@ import net.minecraft.world.gen.feature.FeatureConfig;
 import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
+import net.minecraft.world.gen.foliage.BushFoliagePlacer;
+import net.minecraft.world.gen.foliage.CherryFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
@@ -32,14 +34,12 @@ public class ModConfiguredFeatures {
 
             register(context, TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                     BlockStateProvider.of(TREE_LOG),
+                    new StraightTrunkPlacer(4, 2, 1),
 
-                    //new ForkingTrunkPlacer(5, 4, 3),
-                    new StraightTrunkPlacer(5, 4, 3),
-
-                    //BlockStateProvider.of(Blocks.CHERRY_LEAVES),
                     BlockStateProvider.of(TREE_LEAVES),
-                    //new JungleFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(1), 2),
-                    new BlobFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(1), 2),
+                    //new BlobFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(1), 2),
+                    //new BushFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(3), 4),
+                    new BushFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(2), 3),
 
                     new TwoLayersFeatureSize(1, 0, 2)
             ).build());

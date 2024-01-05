@@ -26,8 +26,8 @@ public class ModOverworldRegion extends Region {
 		new ParameterPointListBuilder()
 				.temperature(Temperature.span(Temperature.NEUTRAL, Temperature.WARM))
 				.humidity(Humidity.span(Humidity.DRY, Humidity.NEUTRAL))
-				.continentalness(Continentalness.span(Continentalness.NEAR_INLAND, Continentalness.MID_INLAND))
-				.erosion(Erosion.EROSION_1, Erosion.EROSION_2)
+				.continentalness(Continentalness.FAR_INLAND)
+				.erosion(Erosion.EROSION_2, Erosion.EROSION_3)
 				.weirdness(Weirdness.LOW_SLICE_VARIANT_ASCENDING, Weirdness.LOW_SLICE_NORMAL_DESCENDING)
 				.depth(Depth.SURFACE, Depth.FLOOR)
 				.build().forEach(point -> builder.add(point, ModBiomes.RAINBOW_FOREST_BIOME));

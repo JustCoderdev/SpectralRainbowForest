@@ -12,22 +12,22 @@ import net.minecraft.world.gen.feature.PlacedFeature;
 
 public class VanillaColor {
 	public static VanillaColor[] ALL = {
-			new VanillaColor("black"),
-			new VanillaColor("dark_blue"),
-			new VanillaColor("dark_green"),
-			new VanillaColor("dark_aqua"),
-			new VanillaColor("dark_red"),
-			new VanillaColor("dark_purple"),
-			new VanillaColor("gold"),
-			new VanillaColor("gray"),
-			new VanillaColor("dark_gray"),
-			new VanillaColor("blue"),
-			new VanillaColor("green"),
-			new VanillaColor("aqua"),
-			new VanillaColor("red"),
-			new VanillaColor("light_purple"),
+			//new VanillaColor("white")
+			new VanillaColor("orange"),
+			new VanillaColor("magenta"),
+			new VanillaColor("light_blue"),
 			new VanillaColor("yellow"),
-			new VanillaColor("white")
+			new VanillaColor("lime"),
+			new VanillaColor("pink"),
+			//new VanillaColor("gray"),
+			//new VanillaColor("light_gray"),
+			new VanillaColor("cyan"),
+			new VanillaColor("purple"),
+			new VanillaColor("blue"),
+			//new VanillaColor("brown"),
+			new VanillaColor("green"),
+			new VanillaColor("red"),
+			//new VanillaColor("black"),
 	};
 
 	private final String color_id;

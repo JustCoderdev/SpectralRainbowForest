@@ -10,6 +10,7 @@ import net.minecraft.sound.BiomeMoodSound;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.GenerationStep;
+import net.minecraft.world.gen.carver.ConfiguredCarvers;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 
 import static com.github.justcoderdev.world.ModPlacedFeatures.SPECTRUM_TREE_PLACED_KEYS;
@@ -24,11 +25,15 @@ public class ModBiomes {
 
 
     public static void globalOverworldGeneration(GenerationSettings.LookupBackedBuilder builder) {
-        DefaultBiomeFeatures.addLandCarvers(builder);
+        //DefaultBiomeFeatures.addLandCarvers(builder);
+        builder.carver(GenerationStep.Carver.AIR, ConfiguredCarvers.CAVE);
+        builder.carver(GenerationStep.Carver.AIR, ConfiguredCarvers.CAVE_EXTRA_UNDERGROUND);
+        builder.carver(GenerationStep.Carver.AIR, ConfiguredCarvers.CANYON);
+
         DefaultBiomeFeatures.addAmethystGeodes(builder);
         DefaultBiomeFeatures.addDungeons(builder);
         DefaultBiomeFeatures.addMineables(builder);
-        DefaultBiomeFeatures.addSprings(builder);
+        //DefaultBiomeFeatures.addSprings(builder);
         DefaultBiomeFeatures.addFrozenTopLayer(builder);
     }
 
@@ -77,8 +82,9 @@ public class ModBiomes {
                 .waterFogColor(329011)
                 .skyColor(7972607)
 
-                .grassColor(0x7f03fc)
+                //.grassColor(0x7f03fc)
                 //.foliageColor(0xd203fc)
+
                 .fogColor(12638463)
                 .moodSound(BiomeMoodSound.CAVE)
                 //.music(MusicType.GAME)
