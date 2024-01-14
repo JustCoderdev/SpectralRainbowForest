@@ -21,7 +21,7 @@ I'm not planning on releasing it to modrinth or forge for the time being, I firs
 
 # Iterations
 
-> It's always fun to watch the improvement process
+It's always fun to watch the improvement process
 
 ## 16th iteration
 ![16th_iteration](https://github.com/JustCoderdev/SpectralRainbowForest/assets/107036402/721795ea-37e3-488e-bb09-c641e568ddbb)
